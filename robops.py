@@ -8,7 +8,7 @@ from huggingface_hub import hf_hub_download
 from typing import Tuple
 import pandas as pd
 
-@st.experimental_memo
+@st.cache_data
 def convert_df(df):
     return df.to_csv(index=True).encode('utf-8')
 
