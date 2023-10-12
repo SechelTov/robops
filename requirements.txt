@@ -1,4 +1,5 @@
 streamlit
+dill                 # dependency for ultralitics
 ultralytics
 huggingface_hub
 numpy
