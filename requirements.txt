@@ -1,5 +1,5 @@
 streamlit
-dill                 # dependency for ultralitics
+dill==0.3.7                 # dependency for YOLO
 ultralytics
 huggingface_hub
 numpy
