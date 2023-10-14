@@ -1,1 +1,1 @@
-libgl1  # as per https://stackoverflow.com/questions/55313610/importerror-libgl-so-1-cannot-open-shared-object-file-no-such-file-or-directo
+libgl1
