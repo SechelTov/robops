@@ -115,6 +115,7 @@ with st.sidebar:
     beep_freq = st.slider('Beep frequency', 100, 2000, 550)
     beep_power_threshold = st.slider('Beep power threshold', 0, 200, 100)
     obj_detection_conf = st.slider('Object detection confidence', 0.0, 1.0, 0.9)
+    show_snapshots = st.checkbox('Show experiment start / stop snapshots')
 
 ################################################
 # Experiment video upload
@@ -169,8 +170,9 @@ if video_file is not None:
         if not start or not end:
             continue                               # no robot detected at either start or end frame => skip this experiment step
 
-        col_start.image(start[2])
-        col_end.image(end[2])
+        if show_snapshots:
+            col_start.image(start[2])
+            col_end.image(end[2])
 
         # transition
         transition = ( int(abs(end[0] - start[0])), int(abs(end[1] - start[1])) )
